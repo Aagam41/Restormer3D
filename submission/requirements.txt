@@ -1,0 +1,10 @@
+# Submission (inference) dependencies only.
+# The base pytorch/pytorch image already provides torch + torchvision.
+#
+# The inference path (submission/inference.py -> algos.restormer3d ->
+# runner.preprocessing) needs only these. It does NOT import matplotlib,
+# scikit-image, or einops -- those are dev/benchmark-only deps.
+
+numpy<2.0
+SimpleITK
+tifffile

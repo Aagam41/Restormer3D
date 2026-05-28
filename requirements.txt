@@ -1,0 +1,21 @@
+# Development / benchmark / pretraining dependencies.
+#
+# Install these to run scripts/pretrain_restormer3d.py, scripts/benchmark.py,
+# and scripts/compare_configs.py locally (i.e. NOT inside the submission
+# Docker image — that uses submission/requirements.txt which is leaner).
+
+# Core numerics + IO
+numpy<2.0
+tifffile
+SimpleITK
+
+# Metrics (stSNR / stPSNR / stSI_PSNR computation)
+scikit-image
+
+# Figures (benchmark comparison grids; only used when save_figures=True)
+matplotlib
+
+# Deep learning — install the build matching your CUDA version.
+# Example (CUDA 12.1):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch
